@@ -1,22 +1,21 @@
 {
-  "name": "vuepress-theme-reco",
-  "version": "1.6.11",
-  "description": "A simple and beautiful vuepress Blog & Doc theme.",
+  "name": "vuepress-theme-recox",
+  "version": "1.0.0",
+  "description": "A simple and beautiful vuepress Blog & Doc theme based on vuepress-theme-reco",
   "keywords": [
     "vuepress",
     "vue",
     "theme"
   ],
-  "homepage": "https://vuepress-theme-reco.recoluan.com",
   "bugs": {
-    "url": "https://github.com/vuepress-reco/vuepress-theme-reco/issues"
+    "url": "https://github.com/shadowfish07/vuepress-theme-recoX/issues"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/vuepress-reco/vuepress-theme-reco.git"
+    "url": "git+https://github.com/shadowfish07/vuepress-theme-recoX.git"
   },
   "license": "MIT",
-  "author": "reco_luan",
+  "author": "shadowfish07",
   "main": "index.js",
   "dependencies": {
     "@vue/composition-api": "1.0.0-beta.21",
