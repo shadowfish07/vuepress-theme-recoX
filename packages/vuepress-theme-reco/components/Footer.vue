@@ -2,7 +2,11 @@
   <div class="footer-wrapper">
     <span>
       <reco-icon icon="reco-theme" />
-      <a target="blank" href="https://vuepress-theme-reco.recoluan.com">{{`vuepress-theme-reco@${version}`}}</a>
+      <a
+        target="blank"
+        href="https://github.com/shadowfish07/vuepress-theme-recoX"
+        >{{ `vuepress-theme-recoX@${version}` }}</a
+      >
     </span>
     <span v-if="$themeConfig.record">
       <reco-icon icon="reco-beian" />
@@ -13,7 +17,13 @@
       <a>
         <span v-if="$themeConfig.author">{{ $themeConfig.author }}</span>
         &nbsp;&nbsp;
-        <span v-if="$themeConfig.startYear && $themeConfig.startYear != (new Date().getFullYear())">{{ $themeConfig.startYear }} - </span>
+        <span
+          v-if="
+            $themeConfig.startYear &&
+            $themeConfig.startYear != new Date().getFullYear()
+          "
+          >{{ $themeConfig.startYear }} -
+        </span>
         {{ new Date().getFullYear() }}
       </a>
     </span>
@@ -22,10 +32,15 @@
       <AccessNumber idVal="/" />
     </span>
     <p class="cyber-security" v-if="$themeConfig.cyberSecurityRecord">
-      <img src="https://img.alicdn.com/tfs/TB1..50QpXXXXX7XpXXXXXXXXXX-40-40.png" alt="">
-      <a :href="$themeConfig.cyberSecurityLink || '#'">{{ $themeConfig.cyberSecurityRecord }}</a>
+      <img
+        src="https://img.alicdn.com/tfs/TB1..50QpXXXXX7XpXXXXXXXXXX-40-40.png"
+        alt=""
+      />
+      <a :href="$themeConfig.cyberSecurityLink || '#'">{{
+        $themeConfig.cyberSecurityRecord
+      }}</a>
     </p>
-    <Comments :isShowComments="false"/>
+    <Comments :isShowComments="false" />
   </div>
 </template>
 
