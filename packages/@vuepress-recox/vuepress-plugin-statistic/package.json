@@ -1,5 +1,5 @@
 {
-  "name": "vuepress-plugin-statistic",
+  "name": "@vuepress-recox/vuepress-plugin-statistic",
   "version": "1.0.0",
   "description": "used by VuePressAdmin,help to count PV and like",
   "main": "index.js",
