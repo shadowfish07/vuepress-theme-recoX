@@ -90,7 +90,7 @@ export default defineComponent({
     });
 
     const showAccessNumber = computed(() => {
-      return !!$themeConfig.vuePressAdminHost;
+      return !!instance.$themeConfig.vuePressAdminHost;
     });
 
     const lastUpdated = computed(() => {
