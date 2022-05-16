@@ -1,8 +1,16 @@
 {
   "packages": [
-    "packages/*"
+    "packages/vuepress-theme-recox",
+    "packages/@vuepress-reco/*",
+    "packages/@vuepress-recox/*"
   ],
-  "version": "1.0.1",
+  "command": {
+    "publish": {
+      "message": "chore(release): publish",
+      "registry": "https://registry.npmjs.org"
+    }
+  },
+  "version": "independent",
   "npmClient": "yarn",
   "useWorkspaces": true
 }

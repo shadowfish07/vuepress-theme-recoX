@@ -1,0 +1,11 @@
+{
+  "name": "vuepress-plugin-statistic",
+  "version": "1.0.0",
+  "description": "used by VuePressAdmin,help to count PV and like",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "shadowfish07",
+  "license": "MIT"
+}
