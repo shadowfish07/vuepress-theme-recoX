@@ -1,6 +1,6 @@
 {
   "name": "@vuepress-recox/vuepress-plugin-statistic",
-  "version": "1.0.0",
+  "version": "1.0.1-alpha.721+2271fde",
   "description": "used by VuePressAdmin,help to count PV and like",
   "main": "index.js",
   "scripts": {
@@ -10,5 +10,6 @@
   "license": "MIT",
   "publishConfig": {
     "access": "public"
-  }
+  },
+  "gitHead": "2271fde6556c4211fad3b30eb93592e047b7e2dd"
 }
