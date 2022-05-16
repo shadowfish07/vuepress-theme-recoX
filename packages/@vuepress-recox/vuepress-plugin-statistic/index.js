@@ -1,5 +1,3 @@
 module.exports = (options, ctx) => {
-  return {
-    // ...
-  };
+  return {};
 };
