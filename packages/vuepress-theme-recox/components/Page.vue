@@ -94,7 +94,7 @@ export default defineComponent({
     const showAccessNumber = computed(() => {
       return (
         !!instance.$themeConfig.vuePressAdminHost &&
-        !!instance.$frontmatter.meta.id
+        !!instance.$frontmatter.meta?.id
       );
     });
 
