@@ -77,8 +77,6 @@ export function fixRouterError404(router) {
 export function visitRecord(VPAHost, router) {
   if (!VPAHost) return;
   router.afterEach((to, from) => {
-    console.log(to);
-
     axios.post(
       VPAHost + "/api/statistics",
       {
