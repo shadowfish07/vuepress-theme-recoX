@@ -1,6 +1,6 @@
 {
   "name": "vuepress-theme-recox",
-  "version": "1.0.2-alpha.724+c022a41",
+  "version": "1.0.2-alpha.727+82336e7",
   "description": "A simple and beautiful vuepress Blog & Doc theme based on vuepress-theme-reco",
   "keywords": [
     "vuepress",
@@ -31,7 +31,7 @@
     "vue-demi": "^0.5.3",
     "vuepress-plugin-smooth-scroll": "^0.0.9"
   },
-  "gitHead": "c022a41c984da84b34695f83a61395d45b01433d",
+  "gitHead": "82336e7a14eab21e2892f6394c85c4918ca31f48",
   "_from": "vuepress-theme-reco@0.2.1",
   "_resolved": "https://registry.npmmirror.com/vuepress-theme-reco/download/vuepress-theme-reco-0.2.1.tgz"
 }

@@ -7,6 +7,7 @@
           <PageInfo
             :pageInfo="$page"
             :showAccessNumber="showAccessNumber"
+            :VPAHost="VPAHost"
           ></PageInfo>
         </div>
         <!-- 这里使用 v-show，否则影响 SSR -->
@@ -89,8 +90,16 @@ export default defineComponent({
       );
     });
 
+    // 配置vpa host且页面存在文章id时显示浏览量
     const showAccessNumber = computed(() => {
-      return !!instance.$themeConfig.vuePressAdminHost;
+      return (
+        !!instance.$themeConfig.vuePressAdminHost &&
+        !!instance.$frontmatter.meta.id
+      );
+    });
+
+    const VPAHost = computed(() => {
+      return instance.$themeConfig.vuePressAdminHost;
     });
 
     const lastUpdated = computed(() => {
@@ -185,6 +194,7 @@ export default defineComponent({
       editLink,
       editLinkText,
       pageStyle,
+      VPAHost,
     };
   },
 });

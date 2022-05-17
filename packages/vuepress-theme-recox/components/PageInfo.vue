@@ -10,7 +10,7 @@
       <span>{{ formatDateValue(pageInfo.frontmatter.date) }}</span>
     </reco-icon>
     <reco-icon v-if="showAccessNumber === true" icon="reco-eye">
-      <span>1234</span>
+      <span>{{ readCount }}</span>
     </reco-icon>
     <reco-icon v-if="pageInfo.frontmatter.tags" icon="reco-tag" class="tags">
       <span
@@ -26,9 +26,10 @@
 </template>
 
 <script>
-import { defineComponent } from "vue-demi";
+import { defineComponent, ref } from "vue-demi";
 import { RecoIcon } from "@vuepress-reco/core/lib/components";
 import { useInstance } from "@theme/helpers/composable";
+import axios from "axios";
 
 export default defineComponent({
   components: { RecoIcon },
@@ -45,6 +46,10 @@ export default defineComponent({
     },
     showAccessNumber: {
       type: Boolean,
+      default: false,
+    },
+    VPAHost: {
+      type: String,
       default: false,
     },
   },
@@ -68,7 +73,26 @@ export default defineComponent({
       return new Intl.DateTimeFormat(instance.$lang).format(new Date(value));
     };
 
-    return { numStyle, goTags, formatDateValue };
+    const readCount = ref("loading");
+
+    if (props.VPAHost) {
+      axios
+        .get(
+          `${props.VPAHost}/api/article/${props.pageInfo.frontmatter.meta.id}/read_count`
+        )
+        .then((res) => {
+          if (res.data.success) {
+            readCount.value = res.data.data;
+          } else {
+            readCount.value = "获取阅读量失败";
+          }
+        })
+        .catch(() => {
+          readCount.value = "获取阅读量失败";
+        });
+    }
+
+    return { numStyle, goTags, formatDateValue, readCount };
   },
 });
 </script>
