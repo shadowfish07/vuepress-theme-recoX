@@ -75,7 +75,11 @@ export default defineComponent({
 
     const readCount = ref("loading");
 
-    if (props.VPAHost && props.pageInfo.frontmatter.meta?[0].id) {
+    if (
+      props.VPAHost &&
+      props.pageInfo.frontmatter.meta &&
+      props.pageInfo.frontmatter.meta[0].id
+    ) {
       axios
         .get(
           `${props.VPAHost}/api/article/${props.pageInfo.frontmatter.meta[0].id}/read_count`
